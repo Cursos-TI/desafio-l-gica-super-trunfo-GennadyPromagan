@@ -12,6 +12,7 @@ int main() {
     float area1;
     float pib1;
     int pontosTuristicos1;
+    int comparacao;
     float percapita;
     float densidade;
     float inversodensicade;
@@ -131,57 +132,106 @@ int main() {
     printf("\n ### BATALHA DE CARTAS ###\n");
     
 // comparacao das cartas
-    
-    if(populacao1 > populacao2){
-        printf("Polulacao: A carta 1 venceu !!\n");
 
-    }else {
-        printf("Populacao: A carta 2 venceu !!\n");
-    }
+    printf("Escolha a categoria de comparacao\n");
+    printf("1. Comparar Populacao\n");
+    printf("2. Comparar Area\n");
+    printf("3. Comparar Pib\n");
+    printf("4. Comparar Pontos turisticos\n");
+    printf("5. Comparar Pib per capita\n");
+    printf("6. Comparar Menor densidade populacional\n");
+    printf("7. Comparar Super Poder\n");
+    printf("Escolha: ");
+    scanf("%d", &comparacao);
 
-    if(area1 > area2){
-        printf("Area km: A carta 1 venceu !!\n");
+    switch(comparacao){
+        case 1:
+            printf("Categoria Populacao\n");
+            if(populacao1 > populacao2){
+                printf("Polulacao: A carta 1 venceu !!\n");
 
-    }else{
-        printf("Area km: A carta 2 venceu !!\n");
-    }
+            }else if (populacao1 < populacao2){
+                printf("Populacao: A carta 2 venceu !!\n");
+            }else{
+                printf("Houve um empate");
+                }
+        break;
 
-    if(pib1 > pib2){
-        printf("Pib: A carta 1 venceu !!\n");
+        case 2:
+            printf("Categoria Area\n");
+            if(area1 > area2){
+                printf("Area km: A carta 1 venceu !!\n");
 
-    }else{
-        printf("Pib: A carta 2 venceu !!\n");
-    }
+            }else if (area1 < area2){
+                printf("Area km: A carta 2 venceu !!\n");
+             }else{
+                printf("Houve um empate");
+                }
+        break;
 
-    if(pontosTuristicos1 > pontosTuristicos2){
-        printf("Pontos Turisticos: A carta 1 venceu !!\n");
+        case 3:
+            printf("Categoria Pib\n");
+            if(pib1 > pib2){
+                printf("Pib: A carta 1 venceu !!\n");
 
-    }else{
-        printf("Pontos Turisticos: A carta 2 venceu !!\n");
-    }
+            }else if (pib1 < pib2){
+                printf("Pib: A carta 2 venceu !!\n");
+            }else{
+                printf("Houve um empate");
+                }
+        break;
 
-    if(percapita > percapita2){
-        printf("Pib Per Capita: A carta 1 venceu!!\n");
+        case 4:
+            printf("Categoria Pontos Turisticos\n");
+            if(pontosTuristicos1 > pontosTuristicos2){
+                printf("Pontos Turisticos: A carta 1 venceu !!\n");
+
+            }else if(pontosTuristicos1 < pontosTuristicos2){
+                printf("Pontos Turisticos: A carta 2 venceu !!\n");
+            }else{
+                printf("Houve um empate\n");
+                }
+        break;
+
+        case 5:
+            printf("Categoria Pib per capita\n");
+            if(percapita > percapita2){
+                printf("Pib Per Capita: A carta 1 venceu!!\n");
         
-    }else{
-        printf("Pib Per Capita: A carta 2 venceu !!\n");
+            }else if (percapita < percapita2){
+                printf("Pib Per Capita: A carta 2 venceu !!\n");
+            }else{
+                printf("Houve um empate\n");
+                }
+        break;
+
+        case 6:
+            printf("Categoria Menor densidade populacional\n");
+            if(densidade < densidade2){
+                printf("Menor Densidade populacional: A carta 1 venceu !!\n");
+
+            }else if (densidade > densidade2){
+                printf("Menor Densidade populacional: A carta 2 venceu !!\n");
+            }else{
+                printf("Houve um empate\n");
+                }
+        break;
+
+        case 7:
+            printf("Categoria Super Poder\n");
+            if(SuperPoder > superpoder2){
+                printf("Super Poder: A carta 1 venceu !!\n");
+
+            }else if (SuperPoder < superpoder2){
+                printf("Super Poder: A carta 2 venceu !!\n");
+            }else{
+                printf("Houve um empate\n");
+                }
+        break;
+        default:
+            printf("Escolha invalida\n");
     }
-
-    if(densidade < densidade){
-        printf("Menor Densidade populacional: A carta 1 venceu !!\n");
-
-    }else{
-        printf("Menor Densidade populacional: A carta 2 venceu !!\n");
-    }
-
-    if(SuperPoder > superpoder2){
-        printf("Super Poder: A carta 1 venceu !!\n");
-
-    }else{
-        printf("Super Poder: A carta 2 venceu !!\n");
-    }
-
- 
 
     return 0;
+
 }
